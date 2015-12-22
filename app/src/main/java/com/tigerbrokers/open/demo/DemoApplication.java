@@ -1,7 +1,6 @@
 package com.tigerbrokers.open.demo;
 
 import android.app.Application;
-import android.content.Context;
 
 import com.tigerbrokers.open.account.AccountContext;
 
@@ -11,14 +10,14 @@ import com.tigerbrokers.open.account.AccountContext;
 public class DemoApplication extends Application {
 
   @Override
-  protected void attachBaseContext(Context base) {
-    super.attachBaseContext(base);
+  public void onCreate() {
+    super.onCreate();
+    AccountContext.init(this);
   }
 
   @Override
-  public void onCreate() {
-    super.onCreate();
-
-    AccountContext.init(this);
+  public void onTerminate() {
+    super.onTerminate();
+    AccountContext.destroy();
   }
 }
