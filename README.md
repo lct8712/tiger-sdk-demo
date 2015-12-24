@@ -94,7 +94,7 @@ AccountContext.start(getActivity(), "accessToken", statusCode);
 
 ### Proguard
 
-如果您的项目使用了 Proguard 进行打包混淆，需要添加以下内容
+如果您的项目使用了 Proguard 进行打包混淆，建议参照 demo 中的 proguard-rules.pro 进行添加
 
 ### 使用限制
 

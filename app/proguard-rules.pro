@@ -32,7 +32,7 @@
 }
 
 -keepclassmembernames interface * {
-    @retrofit.http.* <methods>;
+  @retrofit.http.* <methods>;
 }
 
 
@@ -47,7 +47,7 @@
 
 
 # Lombok models
--keep class hk.com.laohu.stock.data.model.* { *; }
+-keep class com.tigerbrokers.open.account.data.model.* { *; }
 
 
 # Retrolambda
@@ -60,7 +60,7 @@
 -keep class com.umeng.** { *; }
 -keep public class com.umeng.fb.ui.ThreadView { }
 -keep public class com.tigerbrokers.stock.R$* {
-    public static final int *;
+  public static final int *;
 }
 -dontwarn com.umeng.**
 
